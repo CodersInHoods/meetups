@@ -1,0 +1,11 @@
+[
+  { "id": 1, "text": "Eat", "completed": false },
+  {
+    "id": 3,
+    "text": "Play football",
+    "completed": false,
+    "age": 30,
+    "name": "Alex"
+  },
+  { "id": 4, "text": "spin", "completed": false }
+]
