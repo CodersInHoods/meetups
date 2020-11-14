@@ -1,0 +1,196 @@
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Main Section */
+main {
+  height: 0;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+
+.wave {
+  width: 100%;
+  height: 100%;
+  background: url("../images/wave.png") center center;
+  background-size: cover;
+}
+
+.main_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main nav .nav_list {
+  list-style: none;
+  padding: 1em 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav_list__item {
+  padding: 1em 0;
+  margin-left: 1em;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav_list__item::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  transition: 0.2s;
+}
+
+.nav_list__item:hover::after {
+  width: 50%;
+}
+
+.main_container section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main_container section h2 {
+  font-size: 2.5em;
+  margin-top: 0;
+}
+
+.main_container section h1 {
+  font-size: 4em;
+  margin: 0;
+}
+/* =================== */
+
+/* Languages Section */
+.languages {
+  margin: 3em auto;
+}
+.language_wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.language_box {
+  width: 50%;
+  padding-bottom: 50%;
+  background: url("../images/code.png") center center;
+  background-size: cover;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.language_box::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.language_box.html_image::after {
+  content: "HTML";
+}
+
+.language_wrapper .details {
+  padding: 2em;
+}
+
+.language_wrapper.html .details .title {
+  color: #ff4826;
+  font-size: 2em;
+}
+
+.language_box.css_image::after {
+  content: "CSS";
+  color: #00ff9a;
+}
+
+.language_wrapper.css {
+  flex-direction: row-reverse;
+}
+
+.language_wrapper.css .details .title {
+  color: #83a715;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 767px) {
+  .language_box {
+    width: 100%;
+  }
+
+  .language_wrapper.html,
+  .language_wrapper.css {
+    flex-direction: column;
+  }
+
+  .language_wrapper.html .details .title,
+  .language_wrapper.css .details .title {
+    font-size: 1.5em;
+  }
+
+  .language_wrapper .text {
+    font-size: 0.875em;
+  }
+}
+/* =================== */
+
+/* Ways Section */
+.learning_ways {
+  background-color: #eee;
+  padding: 3em 0;
+}
+.learning_ways h2,
+.learning_ways h3 {
+  text-align: center;
+}
+
+.ways {
+  list-style: none;
+  padding: 0;
+  margin: 4em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ways .way {
+  background-color: #fff;
+  max-width: 300px;
+  padding: 0.75em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.ways .way .img {
+  overflow: hidden;
+}
+
+.ways .way .img img {
+  object-fit: cover;
+}
+/* =================== */
